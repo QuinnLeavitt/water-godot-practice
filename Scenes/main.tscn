@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://2yaympitsxxv"]
+
+[ext_resource type="PackedScene" uid="uid://4glervey4rsu" path="res://Scenes/water_plane.tscn" id="1_2l6gu"]
+[ext_resource type="PackedScene" uid="uid://c8skct7bwytfl" path="res://Scenes/skybox.tscn" id="2_df2nw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3s16"]
+albedo_color = Color(0.796078, 0.576471, 0.305882, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2f3qy"]
+material = SubResource("StandardMaterial3D_f3s16")
+
+[node name="Main" type="Node3D"]
+
+[node name="WaterPlane" parent="." instance=ExtResource("1_2l6gu")]
+transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, -0.00499594, 0, -0.00284481)
+
+[node name="Skybox" parent="." instance=ExtResource("2_df2nw")]
+
+[node name="SandBall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.401057, 0)
+mesh = SubResource("SphereMesh_2f3qy")
