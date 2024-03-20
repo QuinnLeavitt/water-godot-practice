@@ -26,7 +26,6 @@ uniform float depth_offset = -0.75;
 uniform sampler2D DEPTH_TEXTURE : hint_depth_texture, filter_linear_mipmap;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
-//uniform
 // Varying variables
 varying float height;
 varying vec3 world_pos;
