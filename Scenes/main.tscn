@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://2yaympitsxxv"]
+[gd_scene load_steps=9 format=3 uid="uid://2yaympitsxxv"]
 
 [ext_resource type="PackedScene" uid="uid://4glervey4rsu" path="res://Scenes/water_plane.tscn" id="1_2l6gu"]
 [ext_resource type="PackedScene" uid="uid://c8skct7bwytfl" path="res://Scenes/skybox.tscn" id="2_df2nw"]
 [ext_resource type="Script" path="res://Scenes/SandBall.gd" id="3_xx276"]
+[ext_resource type="Material" uid="uid://3ol4w14jh6he" path="res://Shaders/caustic.tres" id="4_qlpsv"]
 [ext_resource type="PackedScene" uid="uid://5jwdxajjol5w" path="res://Scenes/sine_wave.tscn" id="4_rpama"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3s16"]
+next_pass = ExtResource("4_qlpsv")
 albedo_color = Color(0.796078, 0.576471, 0.305882, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_2f3qy"]
@@ -27,7 +29,7 @@ script = ExtResource("3_xx276")
 float_force = 3.0
 
 [node name="SandBall" type="MeshInstance3D" parent="SandBall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25462, 1.3493, -0.153849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25462, 0.774048, -0.153849)
 mesh = SubResource("SphereMesh_2f3qy")
 skeleton = NodePath("../..")
 
